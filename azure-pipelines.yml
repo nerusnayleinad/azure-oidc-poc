@@ -18,3 +18,4 @@ steps:
     scriptType: inline
     inlineScript: |
       aws sts get-caller-identity
+      aws ecr list-images
