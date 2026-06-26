@@ -18,4 +18,4 @@ steps:
     scriptType: inline
     inlineScript: |
       aws sts get-caller-identity
-      aws ecr list-images
+      aws ecr list-images --repository-name 881986476278.dkr.ecr.us-east-2.amazonaws.com/nn
