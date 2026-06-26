@@ -1,0 +1,16 @@
+trigger:
+    - main
+
+variables:
+  aws.rolecredential.maxduration: "3600" 
+
+steps:
+- task: AWSShellScript@1
+  continueOnError: true
+  displayName: "testing oidc endpoints"
+  inputs:
+    awsCredentials: 'azure-aws-oidc'
+    regionName: 'us-east-2'
+    scriptType: inline
+    inlineScript: |
+      aws sts get-caller-identity
