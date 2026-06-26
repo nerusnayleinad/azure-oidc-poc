@@ -1,5 +1,8 @@
 trigger:
     - main
+    
+pool:
+ vmImage: 'ubuntu-latest'
 
 variables:
   aws.rolecredential.maxduration: "3600" 
